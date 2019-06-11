@@ -5,11 +5,12 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { AppComponent } from './app.component';
-import { NavLayoutComponent } from './nav-layout/nav-layout.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
-import { TvshowsListComponent } from './tvshows-list/tvshows-list.component';
-import { PeopleListComponent } from './people-list/people-list.component';
-import { MaterialUiModule } from './material-ui.module';
+import { MaterialUiModule } from './utility/material-ui.module';
+import { MediaCardComponent } from './components/media-card/media-card.component';
+import { NavLayoutComponent } from './components/nav-layout/nav-layout.component';
+import { MovieListComponent } from './containers/movie-list/movie-list.component';
+import { TvshowsListComponent } from './containers/tvshows-list/tvshows-list.component';
+import { PeopleListComponent } from './containers/people-list/people-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MaterialUiModule } from './material-ui.module';
     NavLayoutComponent,
     MovieListComponent,
     TvshowsListComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    MediaCardComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
-
+  movies = [0, 1, 2, 3, 4, 5, 6, 7];
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,15 @@
+:host {
+    width: 205px;
+    height: 400px;
+    background-color: transparent;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 25px;
+
+    img {
+        // width: 205px;
+        height: 350px; 
+        // margin-bottom: 10px; 
+    }
+}
