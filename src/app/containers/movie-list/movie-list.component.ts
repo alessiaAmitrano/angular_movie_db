@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 export class MovieListComponent implements OnInit {
 
   movies = [0, 1, 2, 3, 4, 5, 6, 7];
-  movies$: Observable<any>;
   movieList: any[] = [];
   constructor(private movieDb: MovieDbService) {}
 

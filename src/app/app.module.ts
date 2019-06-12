@@ -12,6 +12,8 @@ import { MovieListComponent } from './containers/movie-list/movie-list.component
 import { TvshowsListComponent } from './containers/tvshows-list/tvshows-list.component';
 import { PeopleListComponent } from './containers/people-list/people-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GridLayoutComponent } from './components/grid-layout/grid-layout.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     MovieListComponent,
     TvshowsListComponent,
     PeopleListComponent,
-    MediaCardComponent
+    MediaCardComponent,
+    GridLayoutComponent
   ],
   imports: [
     BrowserModule,

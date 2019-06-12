@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieDbService } from 'src/app/services/movie-db.service';
 
 @Component({
   selector: 'app-people-list',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./people-list.component.scss']
 })
 export class PeopleListComponent implements OnInit {
+  peopleList: any[] = [];
+  constructor(private movieDb: MovieDbService) {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.movieDb.getPeople().subscribe(data => {
+      // tslint:disable-next-line:no-string-literal
+      this.peopleList  = data['results'];
+      console.log('movielist', this.peopleList);
+    });
   }
-
 }

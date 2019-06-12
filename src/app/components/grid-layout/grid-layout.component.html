@@ -1,0 +1,5 @@
+<div class="flex-container" *ngIf="itemsList">
+  <app-media-card *ngFor="let item of itemsList"
+                  [mediaItem]="item">
+  </app-media-card>
+  </div>

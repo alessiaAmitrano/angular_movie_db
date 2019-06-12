@@ -1,3 +1,6 @@
-<img mat-card-image src="assets/ghostpos.jpg" alt="">
+<img mat-card-image [src]="imgSrc" alt="">
 
-<div class="info">{{mediaItem.title}}</div>
+<!-- film title -->
+<mat-card-title *ngIf="mediaItem.title" class="info">{{mediaItem.title}}</mat-card-title>
+<!-- tv show or person's name -->
+<mat-card-title *ngIf="mediaItem.name" class="info">{{mediaItem.name}}</mat-card-title>
