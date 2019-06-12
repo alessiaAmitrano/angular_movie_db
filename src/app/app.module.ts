@@ -11,6 +11,7 @@ import { NavLayoutComponent } from './components/nav-layout/nav-layout.component
 import { MovieListComponent } from './containers/movie-list/movie-list.component';
 import { TvshowsListComponent } from './containers/tvshows-list/tvshows-list.component';
 import { PeopleListComponent } from './containers/people-list/people-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PeopleListComponent } from './containers/people-list/people-list.compon
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    MaterialUiModule
+    MaterialUiModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
