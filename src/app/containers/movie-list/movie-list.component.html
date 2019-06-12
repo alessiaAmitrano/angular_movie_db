@@ -1,4 +1,5 @@
-<div class="flex-container">
-<app-media-card *ngFor="let movie of movies">
+<div class="flex-container" *ngIf="movieList">
+<app-media-card *ngFor="let movie of movieList"
+                [mediaItem]="movie">
 </app-media-card>
 </div>

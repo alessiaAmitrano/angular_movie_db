@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-media-card',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./media-card.component.scss']
 })
 export class MediaCardComponent implements OnInit {
+@Input() mediaItem: any;
 
   constructor() { }
 
