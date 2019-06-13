@@ -1,0 +1,21 @@
+:host {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 25px;
+
+    img {
+        height: 370px; 
+        border-radius: 6px;
+        margin: 10px auto;
+         // margin-bottom: 10px; 
+    }
+
+    mat-card-title {
+        font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 10px  10px;
+    }
+}

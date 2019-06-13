@@ -1,0 +1,27 @@
+<div class="media-img">
+<img mat-card-image [src]="imgSrc" alt="">
+</div>
+
+<div class="media-info">
+  <img class="close" src="assets/closebtn.png" alt="" (click)="closeModal()">
+<!-- film title -->
+<span *ngIf="data.item.title" class="info-title">{{data.item.title}}</span>
+<!-- tv show or person's name -->
+<span *ngIf="data.item.name" class="info-title">{{data.item.name}}</span>
+<!-- film release date -->
+<span class="info" *ngIf="data.item['release_date']">Release Date: {{data.item['release_date']}}</span>
+<!-- show first air date -->
+<span class="info" *ngIf="data.item['first_air_date']">First Air Date: {{data.item['first_air_date']}}</span>
+
+<span class="info">Language: {{data.item['original_language']}}</span>
+
+<mat-chip-list class="info">
+  Score: <mat-chip>{{data.item['vote_average']}}</mat-chip>
+</mat-chip-list>
+
+<mat-chip-list>
+  <mat-chip *ngFor="let g of data.movieGenres">{{g}}</mat-chip>
+</mat-chip-list>
+<!-- plot -->
+<span class="info-plot">{{data.item.overview}}</span>
+</div>

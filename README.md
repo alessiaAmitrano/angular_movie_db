@@ -1,6 +1,10 @@
-# NgMovieDb
+# NgMovieDb by Alessia Amitrano
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1. 
+
+## Before starting the dev server
+
+Open the app in a code editor and proceed with an `npm install`
 
 ## Development server
 

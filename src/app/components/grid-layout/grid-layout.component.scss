@@ -1,0 +1,26 @@
+.flex-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    margin: 50px auto;
+}
+
+span {
+    font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 150px;
+}
+
+input {
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+::ng-deep mat-input-element {
+    height: 200px !important;
+}
