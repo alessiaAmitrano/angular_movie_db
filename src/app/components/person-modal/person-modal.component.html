@@ -1,0 +1,14 @@
+<div class="media-img">
+    <img mat-card-image [src]="imgSrc" alt="">
+    </div>
+    
+    <div class="media-info">
+      <img class="close" src="assets/closebtn.png" alt="" (click)="closeModal()">
+    <!-- person's name -->
+    <span *ngIf="data.item.name" class="info-title">{{data.item.name}}</span>
+    <!-- movies -->
+    <mat-chip-list>
+      <mat-chip *ngFor="let g of data.movieGenres">{{g}}</mat-chip>
+    </mat-chip-list>
+
+ </div>

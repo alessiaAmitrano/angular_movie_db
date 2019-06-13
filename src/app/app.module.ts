@@ -14,6 +14,7 @@ import { PeopleListComponent } from './containers/people-list/people-list.compon
 import { HttpClientModule } from '@angular/common/http';
 import { GridLayoutComponent } from './components/grid-layout/grid-layout.component';
 import { DetailModalComponent } from './components/detail-modal/detail-modal.component';
+import { PersonModalComponent } from './components/person-modal/person-modal.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DetailModalComponent } from './components/detail-modal/detail-modal.com
     PeopleListComponent,
     MediaCardComponent,
     GridLayoutComponent,
-    DetailModalComponent
+    DetailModalComponent,
+    PersonModalComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { DetailModalComponent } from './components/detail-modal/detail-modal.com
     HttpClientModule
   ],
   entryComponents: [
-    DetailModalComponent
+    DetailModalComponent,
+    PersonModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

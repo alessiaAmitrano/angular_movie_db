@@ -13,6 +13,8 @@ export class MovieDbService {
   moviesUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${this.apiKey}&language=en-US&sort_by=popularity.desc`;
   tvShowsUrl = `https://api.themoviedb.org/3/tv/popular?api_key=${this.apiKey}`;
   peopleUrl = `https://api.themoviedb.org/3/person/popular?api_key=${this.apiKey}`;
+  movieGenresUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${this.apiKey}&language=en-US`;
+  tvShowsGenresUrl = `https://api.themoviedb.org/3/genre/tv/list?api_key=${this.apiKey}&language=en-US`;
   constructor(private http: HttpClient) { }
 
   getMovies(): Observable<any[]> {
@@ -25,6 +27,14 @@ export class MovieDbService {
 
   getPeople(): Observable<any[]> {
     return this.http.get<any[]>(this.peopleUrl);
+  }
+
+  getMovieGenres(): Observable<any[]> {
+    return this.http.get<any[]>(this.movieGenresUrl);
+  }
+
+  getShowsGenres(): Observable<any[]> {
+    return this.http.get<any[]>(this.tvShowsGenresUrl);
   }
 
 }

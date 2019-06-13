@@ -1,17 +1,13 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-
-export interface DialogData {
-  item: any;
-  movieGenres: any[];
-}
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { DetailModalComponent, DialogData } from '../detail-modal/detail-modal.component';
 
 @Component({
-  selector: 'app-detail-modal',
-  templateUrl: './detail-modal.component.html',
-  styleUrls: ['./detail-modal.component.scss']
+  selector: 'app-person-modal',
+  templateUrl: './person-modal.component.html',
+  styleUrls: ['./person-modal.component.scss']
 })
-export class DetailModalComponent implements OnInit {
+export class PersonModalComponent implements OnInit {
   imgSrc;
   constructor(
     public dialogRef: MatDialogRef<DetailModalComponent>,

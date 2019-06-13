@@ -12,6 +12,7 @@ import { DetailModalComponent } from 'src/app/components/detail-modal/detail-mod
 })
 export class MovieListComponent implements OnInit {
   movieList: any[] = [];
+  movieGenresList: any[] = [];
   selectedMovie: any;
   constructor(private movieDb: MovieDbService, public dialog: MatDialog) {}
 
@@ -21,25 +22,42 @@ export class MovieListComponent implements OnInit {
       this.movieList  = data['results'];
       console.log('movielist', this.movieList);
     });
+    this.movieDb.getMovieGenres().subscribe(data => {
+      // tslint:disable-next-line:no-string-literal
+      this.movieGenresList  = data['genres'];
+      console.log('genres', this.movieGenresList);
+    });
   }
 
   selectMovie(item: any) {
     this.selectedMovie = item;
     console.log('selected', this.selectedMovie);
+    // get genres
+    const selMovieGenres =  this.getMovieGenres();
     // open modal
-    this.openModal();
+    this.openModal(selMovieGenres);
   }
 
-  openModal()  {
+  openModal( genres: any)  {
     const dialogRef = this.dialog.open(DetailModalComponent, {
-      width: '1200px',
-      height: '80%',
-      data: {item: this.selectedMovie}
+      width: '900px',
+      height: '61%',
+      data: {item: this.selectedMovie, movieGenres: genres}
     });
 
     dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
       this.selectedMovie = null;
     });
+  }
+
+  getMovieGenres(): string[] {
+    const genresArray = [];
+    // tslint:disable-next-line:no-string-literal
+    this.selectedMovie['genre_ids'].map( genre => {
+       genresArray.push(this.movieGenresList.find(obj => obj.id === genre).name);
+    });
+    console.log('genresArray', genresArray);
+    return genresArray;
   }
 }
