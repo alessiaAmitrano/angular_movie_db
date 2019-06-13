@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GridLayoutComponent } from './components/grid-layout/grid-layout.component';
 import { DetailModalComponent } from './components/detail-modal/detail-modal.component';
 import { PersonModalComponent } from './components/person-modal/person-modal.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,14 +29,16 @@ import { PersonModalComponent } from './components/person-modal/person-modal.com
     MediaCardComponent,
     GridLayoutComponent,
     DetailModalComponent,
-    PersonModalComponent
+    PersonModalComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MaterialUiModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   entryComponents: [
     DetailModalComponent,

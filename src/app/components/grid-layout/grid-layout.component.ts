@@ -8,6 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class GridLayoutComponent implements OnInit {
 @Input() itemsList;
 @Output() selectedItemEmitter = new EventEmitter<any>();
+searchText: string;
+
   constructor() { }
 
   ngOnInit() {

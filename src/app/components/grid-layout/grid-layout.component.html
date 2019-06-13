@@ -1,5 +1,6 @@
+<input type="search" [(ngModel)]="searchText" placeholder="Search text">
 <div class="flex-container" *ngIf="itemsList">
-  <app-media-card *ngFor="let item of itemsList"
+  <app-media-card *ngFor="let item of itemsList| filter: searchText"
                   [mediaItem]="item"
                   (click)="selectCard(item)">
   </app-media-card>
