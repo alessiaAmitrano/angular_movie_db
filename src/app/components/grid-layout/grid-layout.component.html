@@ -1,4 +1,8 @@
-<input type="search" [(ngModel)]="searchText" placeholder="Search text">
+<span>Search:</span>
+<mat-form-field>
+  <input matInput type="search" [(ngModel)]="searchText" >
+</mat-form-field>
+
 <div class="flex-container" *ngIf="itemsList">
   <app-media-card *ngFor="let item of itemsList| filter: searchText"
                   [mediaItem]="item"
