@@ -9,20 +9,34 @@ import { DetailModalComponent, DialogData } from '../detail-modal/detail-modal.c
 })
 export class PersonModalComponent implements OnInit {
   imgSrc;
+  movies;
+  relatedMovies = [];
   constructor(
     public dialogRef: MatDialogRef<DetailModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
   ngOnInit() {
     // tslint:disable-next-line:no-string-literal
+    if (this.data.item['known_for']) {
+      // tslint:disable-next-line:no-string-literal
+      this.movies = this.data.item['known_for'];
+      this.movies.forEach(element => {
+        if (element.title) {
+          this.relatedMovies.push(element.title);
+        } else {
+          this.relatedMovies.push(element.name);
+        }
+      });
+    }
+    // tslint:disable-next-line:no-string-literal
     if (this.data.item['profile_path']) {
-       // tslint:disable-next-line:no-string-literal
+      // tslint:disable-next-line:no-string-literal
       this.imgSrc = `https://image.tmdb.org/t/p/w500${this.data.item['profile_path']}`;
-
     } else {
       // tslint:disable-next-line:no-string-literal
       this.imgSrc = `https://image.tmdb.org/t/p/w500${this.data.item['poster_path']}`;
     }
+
   }
 
   onNoClick(): void {

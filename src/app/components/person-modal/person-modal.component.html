@@ -8,7 +8,7 @@
     <span *ngIf="data.item.name" class="info-title">{{data.item.name}}</span>
     <!-- movies -->
     <mat-chip-list>
-      <mat-chip *ngFor="let g of data.movieGenres">{{g}}</mat-chip>
+      <mat-chip *ngFor="let movie of relatedMovies">{{movie}}</mat-chip>
     </mat-chip-list>
 
  </div>
