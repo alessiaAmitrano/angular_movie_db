@@ -1,0 +1,59 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-content: space-around;
+
+    // margin: 50px 25px;
+    .media-img {
+        display: flex;
+
+        img {
+            width: 350px;
+            height: 500px;
+            border-radius: 6px;
+            margin: 10px auto;
+            // margin-bottom: 10px; 
+        }
+    }
+
+    .media-info {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+
+        .info-title {
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 10px 10px;
+        }
+
+        ::ng-deep .mat-chip-list-wrapper {
+            justify-content: flex-end !important;
+        }
+
+        mat-chip {
+            font-size: 19px;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+
+        .info {
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0px 10px ;
+        }
+        .info-plot {
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 50px 10px 10px;
+        }
+
+    }
+
+}

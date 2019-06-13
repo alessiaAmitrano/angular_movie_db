@@ -1,2 +1,3 @@
-<app-grid-layout [itemsList]="movieList">   
+<app-grid-layout [itemsList]="movieList"
+                 (selectedItemEmitter)="selectMovie($event)">   
 </app-grid-layout>

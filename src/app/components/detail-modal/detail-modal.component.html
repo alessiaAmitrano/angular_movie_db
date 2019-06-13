@@ -1,0 +1,19 @@
+<div class="media-img">
+<img mat-card-image [src]="imgSrc" alt="">
+</div>
+
+<div class="media-info">
+    <mat-chip-list>
+        <mat-chip>{{data.item['vote_average']}}</mat-chip>
+        <!-- <mat-chip>Naan</mat-chip>
+        <mat-chip>Dal</mat-chip> -->
+      </mat-chip-list>
+<!-- film title -->
+<span *ngIf="data.item.title" class="info-title">{{data.item.title}}</span>
+<!-- tv show or person's name -->
+<span *ngIf="data.item.name" class="info-title">{{data.item.name}}</span>
+
+<span class="info">Release Date: {{data.item['release_date']}}</span>
+<span class="info">Language: {{data.item['original_language']}}</span>
+<span class="info-plot">{{data.item.overview}}</span>
+</div>

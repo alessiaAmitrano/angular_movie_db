@@ -13,6 +13,7 @@ import { TvshowsListComponent } from './containers/tvshows-list/tvshows-list.com
 import { PeopleListComponent } from './containers/people-list/people-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GridLayoutComponent } from './components/grid-layout/grid-layout.component';
+import { DetailModalComponent } from './components/detail-modal/detail-modal.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { GridLayoutComponent } from './components/grid-layout/grid-layout.compon
     TvshowsListComponent,
     PeopleListComponent,
     MediaCardComponent,
-    GridLayoutComponent
+    GridLayoutComponent,
+    DetailModalComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,9 @@ import { GridLayoutComponent } from './components/grid-layout/grid-layout.compon
     NoopAnimationsModule,
     MaterialUiModule,
     HttpClientModule
+  ],
+  entryComponents: [
+    DetailModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 <div class="flex-container" *ngIf="itemsList">
   <app-media-card *ngFor="let item of itemsList"
-                  [mediaItem]="item">
+                  [mediaItem]="item"
+                  (click)="selectCard(item)">
   </app-media-card>
   </div>
